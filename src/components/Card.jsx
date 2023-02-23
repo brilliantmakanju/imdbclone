@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function Card({ result }){
 	return (
 	<Link href={`movie/${result.pk}`} >
-	<div className="bg-[gray] w-[70%] shadow-md shadow-[white] hover:shadow-amber-600 duration-300 ease-in-out rounded-md cursor-pointer " >
+	<div className="bg-[gray] w-full shadow-md shadow-[white] hover:shadow-amber-600 duration-300 ease-in-out rounded-md cursor-pointer " >
 	<div className="relative h-[300px] w-full " >
 	
 		<Image src={`https://pyapimovie.pythonanywhere.com${result.poster_pic}`} fill className="rounded-t-md absolute " placeholder="blur" blurDataURL={`https://pyapimovie.pythonanywhere.com${result.poster_pic}`} alt={result.title}/>
