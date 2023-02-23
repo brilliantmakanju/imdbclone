@@ -1,4 +1,4 @@
-
+import Head from "next/head"
 //const API_KEY = process.env.API_KEY
 import Results from "../components/Results"
 
@@ -11,6 +11,11 @@ export default async function Home({ searchParams }) {
 	const data = await res.json()
   	return (
     		<>
+		<Head>
+				<title>Imdb-Clone | Home </title>
+        			<meta content="width=device-width, initial-scale=1" name="viewport" />
+        			<link rel="icon" href="/favicon.ico" />
+			</Head>
     		{ data.length ===  0 
     		?
     			<h3>Result Not Found</h3>
