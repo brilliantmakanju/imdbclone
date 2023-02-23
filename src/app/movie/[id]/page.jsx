@@ -2,7 +2,7 @@ import Image from "next/image"
 
 async function getMovie(movieId){
 	//const movieId = params.id
-	const res = await fetch(`http://127.0.0.1:8000/Movie/${movieId}`)
+	const res = await fetch(`https://pyapimovie.pythonanywhere.com/Movie/${movieId}`)
 	
 	return await res.json()
 }
