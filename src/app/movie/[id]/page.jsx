@@ -12,7 +12,7 @@ export default async function MoviePage({ params }) {
 	const movie = await getMovie(movieId)
 	return (
 		<div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-5" >
-		<video className="rounded-md w-full p-[20px] " src={`http://127.0.0.1:8000${movie.video_file}`}  controls>
+		<video className="rounded-md w-full p-[20px] " src={`https://pyapimovie.pythonanywhere.com${movie.video_file}`}  controls>
 				
 			</video>
 			<div className="p-[20px]" >
