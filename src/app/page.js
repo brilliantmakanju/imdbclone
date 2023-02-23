@@ -4,7 +4,7 @@ import Results from "../components/Results"
 
 export default async function Home({ searchParams }) {
 	//const genre = searchParams.genre ||  "fetchTrending "
-	const res = await fetch("https://pyapimovie.pythonanywhere.com/movies", {next : { revalidate: 1000 }})
+	const res = await fetch("https://pyapimovie.pythonanywhere.com/movies", {next : { revalidate: 100000 }})
 	if(!res.ok){
 		throw new Error("Failed to Fetch Data")
 	}
